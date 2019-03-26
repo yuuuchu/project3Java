@@ -1,0 +1,97 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+For the user loging gui following are the model and control classes, first we have to create the table user
+usging the following query.
+///////////////////////////
+
+CREATE TABLE `travelexperts`.`users` ( `Id` INT NOT NULL , `userName` VARCHAR(20) NOT NULL , `userPassword` VARCHAR(20) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB;
+
+
+///////////////////////////////////////
+Now we need the model class as follows.
+///////////////////////////////////////
+
+package com.company;
+
+
+import java.awt.*;
+import  java.sql.*;
+import java.util.concurrent.ExecutionException;
+
+public class loginModel {
+    Statement stmt;
+    Connection con;
+   public boolean connectDb(){
+
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/travelexperts", "root", "");
+             stmt = con.createStatement();
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return true;
+    }
+
+    public boolean loginUser(String userName, String pass){
+       boolean userFound=false;
+       int count=0;
+       if(connectDb())
+       {
+           try {
+           //Statement stmt=con.createStatement();
+           ResultSet rs=stmt.executeQuery("SELECT * from users where userName ='"+userName+"'"+" and userPassword ='"
+           +pass+"'");
+
+               while (rs.next())
+               {
+                   count++;
+               }
+               con.close();
+           }
+           catch (Exception e)
+           {
+               System.out.println(e);
+           }
+           if(count>0)
+           {
+           userFound=true;
+           }
+
+       }
+
+       return userFound;
+    }
+}
+
+
+
+///////////////////////////////////////////////
+now we need following code in controller class 
+//////////////////////////////////////////////
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+    loginModel loginObj=new loginModel();
+    if(loginObj.loginUser("Muhammad","Khan")){
+        System.out.println("Valied");
+    }
+    else{
+        System.out.println("Invalied");
+    }
+
+    }
+}
+
+
+
+
+
