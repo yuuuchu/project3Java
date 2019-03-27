@@ -11,9 +11,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    Button btnSignIn;
-    TextField txtUserField;
-    PasswordField txtPassword;
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
