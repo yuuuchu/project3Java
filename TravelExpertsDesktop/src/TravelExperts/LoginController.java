@@ -38,7 +38,7 @@ public class LoginController {
 
     @FXML
     void OnClicked(MouseEvent event) {
-        // write your code here
+
         DBLoginConnection loginObj=new DBLoginConnection();
 
 
