@@ -10,7 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-public class LoginController {
+public class DBLoginController {
 
     @FXML
     private ResourceBundle resources;
@@ -49,10 +49,6 @@ public class LoginController {
             lblUser.setText("Invalid");
         }
     }
-
-
-
-
 
     @FXML
     void initialize() {
