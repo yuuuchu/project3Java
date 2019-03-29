@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="20.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="510.0" minWidth="10.0" prefWidth="502.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="28.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="292.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="tvCustomers" prefHeight="261.0" prefWidth="510.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="tcName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="tcAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="tcHomePhone" prefWidth="75.0" text="Home No." />
+            <TableColumn fx:id="tcBusPhone" prefWidth="84.0" text="Business No." />
+            <TableColumn fx:id="tcEmail" prefWidth="133.0" text="Email" />
+            <TableColumn fx:id="tcAgentId" prefWidth="67.0" text="Agent ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="380.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btnAdd" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Modify" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="220.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

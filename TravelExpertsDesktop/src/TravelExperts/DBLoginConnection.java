@@ -13,7 +13,7 @@ public class DBLoginConnection {
         {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/travelexperts", "root", "");
+                    "jdbc:mysql://localhost:3306/travelexperts", "jackie", "123456");
             stmt = con.createStatement();
 
         }
