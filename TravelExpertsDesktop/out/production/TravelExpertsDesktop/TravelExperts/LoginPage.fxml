@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="gpLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.DBLoginController">
+<GridPane fx:id="gpLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.DBLoginController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="359.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="241.0" />
@@ -76,8 +76,11 @@
                   </Label>
                   <PasswordField fx:id="txtPassword" prefHeight="22.0" prefWidth="139.0">
                      <padding>
-                        <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
                      </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </PasswordField>
                </children>
                <padding>
@@ -89,7 +92,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="btnSignIn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#OnClicked" prefHeight="43.0" prefWidth="95.0" text="Sign In" textAlignment="CENTER">
+            <Button fx:id="btnSignIn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnClicked" onMouseClicked="#OnClicked" prefHeight="43.0" prefWidth="95.0" text="Sign In" textAlignment="CENTER">
                <VBox.margin>
                   <Insets left="70.0" top="20.0" />
                </VBox.margin>

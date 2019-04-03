@@ -9,6 +9,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -46,21 +48,26 @@ public class DBLoginController {
     protected Button btnSignIn;
 
     @FXML
-    protected boolean OnClicked(MouseEvent event) throws IOException {
+    protected boolean OnClicked(ActionEvent event) throws IOException {
 
         DBLoginConnection loginObj=new DBLoginConnection();
         String loginUser = txtUserField.getText();
         String pass = txtPassword.getText();
 
         if(loginObj.loginUser("a","a") == loginObj.loginUser(loginUser, pass)){
-            lblUser.setText("Valid");
+            Parent root1 = FXMLLoader.load(getClass().getResource("Main.fxml"));
+            Scene mainPage = new Scene(root1);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(mainPage);
             loginFade();
+            window.show();
             return true;
         }
         else{
             lblUser.setText("Invalid");
             return false;
         }
+
     }
 
     private void loginFade(){
