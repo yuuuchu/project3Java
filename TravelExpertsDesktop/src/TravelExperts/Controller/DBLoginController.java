@@ -1,9 +1,7 @@
-package TravelExperts;
+package TravelExperts.Controller;
 
-import java.io.IOException;
-
+import TravelExperts.DBLoginConnection;
 import javafx.animation.FadeTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -39,7 +37,7 @@ public class DBLoginController {
             String pass = txtPassword.getText();
 
             if(loginObj.loginUser("a","a") == loginObj.loginUser(loginUser, pass)){
-                Parent root1 = FXMLLoader.load(getClass().getResource("Main.fxml"));
+                Parent root1 = FXMLLoader.load(getClass().getResource("GUI/Main.fxml"));
                 Scene mainPage = new Scene(root1);
                 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                 window.setScene(mainPage);

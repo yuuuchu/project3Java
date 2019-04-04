@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="gpLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.DBLoginController">
+<GridPane fx:id="gpLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.DBLoginController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="359.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="241.0" />
@@ -27,7 +27,7 @@
          <children>
             <ImageView fitHeight="681.0" fitWidth="497.0" pickOnBounds="true">
                <image>
-                  <Image url="@image/3078.jpeg" />
+                  <Image url="@../image/3078.jpeg" />
                </image></ImageView>
          </children>
       </VBox>

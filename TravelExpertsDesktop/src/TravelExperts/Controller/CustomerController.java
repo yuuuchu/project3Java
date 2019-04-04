@@ -1,4 +1,4 @@
-package TravelExperts;
+package TravelExperts.Controller;
 
 
 import java.net.URL;

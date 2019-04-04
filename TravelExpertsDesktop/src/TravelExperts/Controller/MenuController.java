@@ -1,4 +1,4 @@
-package TravelExperts;
+package TravelExperts.Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -47,7 +47,7 @@ public class MenuController {
 
     @FXML
     void OnCustomerClicked(MouseEvent event) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("Customers.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("GUI/Customers.fxml"));
         Scene custPage = new Scene(root1);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(custPage);
