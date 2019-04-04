@@ -1,6 +1,5 @@
 package TravelExperts;
 
-import java.awt.*;
 import  java.sql.*;
 import java.util.concurrent.ExecutionException;
 
@@ -13,7 +12,7 @@ public class DBLoginConnection {
         {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/travelexperts", "jackie", "123456");
+                    "jdbc:mysql://localhost:3306/travelexperts", "root", "");
             stmt = con.createStatement();
 
         }
