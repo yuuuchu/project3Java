@@ -64,15 +64,7 @@
                         <Font name="Courier New Bold" size="28.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblCustomer" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnCustomerClicked" style="-fx-text-fill: white;" text="Add" textAlignment="CENTER">
-                    <VBox.margin>
-                        <Insets bottom="30.0" top="30.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Courier New Bold" size="18.0" />
-                    </font>
-                </Label>
-                <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Modify" textAlignment="CENTER">
+                <Label fx:id="lblCustomer" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnCustomerClicked" style="-fx-text-fill: white;" text="Add new customer" textAlignment="CENTER">
                     <VBox.margin>
                         <Insets bottom="35.0" top="25.0" />
                     </VBox.margin>
@@ -80,9 +72,17 @@
                         <Font name="Courier New Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblProduct" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Delete" textAlignment="CENTER">
+                <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Modify customer" textAlignment="CENTER">
                     <VBox.margin>
-                        <Insets bottom="35.0" top="20.0" />
+                        <Insets bottom="35.0" left="10.0" right="10.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Courier New Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblProduct" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Delete customer" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="35.0" left="10.0" right="10.0" top="25.0" />
                     </VBox.margin>
                     <font>
                         <Font name="Courier New Bold" size="18.0" />
