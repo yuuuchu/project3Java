@@ -47,10 +47,45 @@ public class MenuController {
 
     @FXML
     void OnCustomerClicked(MouseEvent event) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("GUI/Customers.fxml"));
-        Scene custPage = new Scene(root1);
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/Customers.fxml"));
+        clickLabel(event, root);
+    }
+
+    @FXML
+    void OnBookingClicked(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/Bookings.fxml"));
+        clickLabel(event, root);
+    }
+
+    @FXML
+    void OnPackageClicked(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/TravelPackages.fxml"));
+        clickLabel(event, root);
+    }
+
+    @FXML
+    void OnProductClicked(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/Products.fxml"));
+        clickLabel(event, root);
+    }
+
+    @FXML
+    void OnSupplierClicked(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/Suppliers.fxml"));
+        clickLabel(event, root);
+    }
+
+    @FXML
+    void OnSignOutClicked(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/LoginPage.fxml"));
+        clickLabel(event, root);
+    }
+
+
+    public void clickLabel(MouseEvent event, Parent root) {
+        Scene page = new Scene(root);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(custPage);
+        window.setScene(page);
         window.show();
     }
 

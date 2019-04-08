@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.MenuController">
+<BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.MenuController">
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="335.0" prefWidth="200.0" style="-fx-background-color: FF935C;" BorderPane.alignment="CENTER">
          <children>
@@ -28,7 +28,7 @@
                   <Font name="Courier New Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lblBooking" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Bookings" textAlignment="CENTER" VBox.vgrow="NEVER">
+            <Label fx:id="lblBooking" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnBookingClicked" style="-fx-text-fill: white;" text="Bookings" textAlignment="CENTER" VBox.vgrow="NEVER">
                <VBox.margin>
                   <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
@@ -36,7 +36,7 @@
                   <Font name="Courier New Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Travel Packages" textAlignment="CENTER">
+            <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnPackageClicked" style="-fx-text-fill: white;" text="Travel Packages" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
@@ -44,7 +44,7 @@
                   <Font name="Courier New Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lblProduct" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Products" textAlignment="CENTER">
+            <Label fx:id="lblProduct" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnProductClicked" style="-fx-text-fill: white;" text="Products" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
@@ -52,7 +52,7 @@
                   <Font name="Courier New Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lblSupplier" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Suppliers" textAlignment="CENTER">
+            <Label fx:id="lblSupplier" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnSupplierClicked" style="-fx-text-fill: white;" text="Suppliers" textAlignment="CENTER">
                <font>
                   <Font name="Courier New Bold" size="18.0" />
                </font>
@@ -60,7 +60,7 @@
                   <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="lblSignout" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Sign out" textAlignment="CENTER">
+            <Label fx:id="lblSignout" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnSignOutClicked" style="-fx-text-fill: white;" text="Sign out" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="20.0" top="10.0" />
                </VBox.margin>
@@ -72,9 +72,9 @@
       </VBox>
    </left>
    <center>
-      <ImageView fitHeight="513.0" fitWidth="600.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="440.0" fitWidth="600.0" pickOnBounds="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../image/cloud.jpg" />
+            <Image url="@../image/267.jpg" />
          </image></ImageView>
    </center>
 </BorderPane>
