@@ -47,37 +47,37 @@ public class MenuController {
 
     @FXML
     void OnCustomerClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/Customers.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Customers.fxml"));
         clickLabel(event, root);
     }
 
     @FXML
     void OnBookingClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/Bookings.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Bookings.fxml"));
         clickLabel(event, root);
     }
 
     @FXML
     void OnPackageClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/TravelPackages.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/TravelPackages.fxml"));
         clickLabel(event, root);
     }
 
     @FXML
     void OnProductClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/Products.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Products.fxml"));
         clickLabel(event, root);
     }
 
     @FXML
     void OnSupplierClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/Suppliers.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Suppliers.fxml"));
         clickLabel(event, root);
     }
 
     @FXML
     void OnSignOutClicked(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/LoginPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/LoginPage.fxml"));
         clickLabel(event, root);
     }
 

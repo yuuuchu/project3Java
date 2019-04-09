@@ -37,7 +37,7 @@ public class DBLoginController {
             String pass = txtPassword.getText();
 
             if(loginObj.loginUser("a","a") == loginObj.loginUser(loginUser, pass)){
-                Parent root1 = FXMLLoader.load(getClass().getResource("GUI/Main.fxml"));
+                Parent root1 = FXMLLoader.load(getClass().getResource("../GUI/Main.fxml"));
                 Scene mainPage = new Scene(root1);
                 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                 window.setScene(mainPage);
