@@ -1,10 +1,16 @@
 package TravelExperts.Controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+
+import static TravelExperts.Controller.MenuController.clickLabel;
 
 public class SupplierController {
 
@@ -28,6 +34,13 @@ public class SupplierController {
 
     @FXML
     private Label lblExit;
+
+
+    @FXML
+    void onClickedExit(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Main.fxml"));
+        clickLabel(event, root);
+    }
 
     @FXML
     void initialize() {

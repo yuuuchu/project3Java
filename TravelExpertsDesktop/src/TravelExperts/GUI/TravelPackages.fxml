@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.MenuController">
+<BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.PackageController">
     <left>
         <VBox alignment="TOP_CENTER" prefHeight="440.0" prefWidth="209.0" style="-fx-background-color: FF935C;" BorderPane.alignment="CENTER">
             <children>
-                <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Packages" textAlignment="CENTER">
+                <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Packages" textAlignment="CENTER">
                     <VBox.margin>
                         <Insets bottom="10.0" top="25.0" />
                     </VBox.margin>
@@ -18,7 +18,7 @@
                         <Font name="Courier New Bold" size="28.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblCustomer" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnCustomerClicked" style="-fx-text-fill: white;" text="Create new package" textAlignment="CENTER">
+                <Label fx:id="lblNewPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Create new package" textAlignment="CENTER">
                     <VBox.margin>
                         <Insets bottom="35.0" top="25.0" />
                     </VBox.margin>
@@ -26,7 +26,7 @@
                         <Font name="Courier New Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblBooking" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Edit package" textAlignment="CENTER" VBox.vgrow="NEVER">
+                <Label fx:id="lblEditPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Edit package" textAlignment="CENTER" VBox.vgrow="NEVER">
                     <VBox.margin>
                         <Insets bottom="35.0" top="25.0" />
                     </VBox.margin>
@@ -34,7 +34,7 @@
                         <Font name="Courier New Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Delete package" textAlignment="CENTER">
+                <Label fx:id="lblDeletePackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Delete package" textAlignment="CENTER">
                     <VBox.margin>
                         <Insets bottom="35.0" top="25.0" />
                     </VBox.margin>
@@ -42,7 +42,7 @@
                         <Font name="Courier New Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblSignout" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Back to menu" textAlignment="CENTER">
+                <Label fx:id="lblExit" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#onClickedExit" style="-fx-text-fill: white;" text="Back to menu" textAlignment="CENTER">
                     <VBox.margin>
                         <Insets bottom="20.0" top="10.0" />
                     </VBox.margin>
