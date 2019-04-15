@@ -6,6 +6,32 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.PackageController">
+   <children>
+      <ComboBox fx:id="ddPackageID" layoutX="272.0" layoutY="51.0" prefHeight="25.0" prefWidth="239.0" promptText="Package ID" />
+      <Label fx:id="lblSelectPackageID" layoutX="89.0" layoutY="51.0" prefHeight="25.0" prefWidth="150.0" text="Select Package ID" />
+      <Label fx:id="lblPackageStartDate" layoutX="89.0" layoutY="150.0" prefHeight="17.0" prefWidth="160.0" text="Package Start Date" />
+      <Label fx:id="lblPackageAgencyComm" layoutX="89.0" layoutY="294.0" prefHeight="17.0" prefWidth="160.0" text="Package Agency Commission" />
+      <TextField fx:id="tfPackageAgencyComm" layoutX="271.0" layoutY="290.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label fx:id="lblPackageEndDate" layoutX="89.0" layoutY="188.0" prefHeight="17.0" prefWidth="160.0" text="Package End Date" />
+      <Label fx:id="lblPackageDescription" layoutX="89.0" layoutY="225.0" prefHeight="17.0" prefWidth="160.0" text="Package Description" />
+      <TextField fx:id="tfPackageDescription" layoutX="271.0" layoutY="221.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label fx:id="lblPackageBasePrice" layoutX="89.0" layoutY="260.0" prefHeight="17.0" prefWidth="160.0" text="Package Base Price" />
+      <Label fx:id="lblPackageName" layoutX="89.0" layoutY="113.0" prefHeight="17.0" prefWidth="160.0" text="Package Name" />
+      <TextField fx:id="tfPackageBasePrice" layoutX="271.0" layoutY="256.0" prefHeight="25.0" prefWidth="239.0" />
+      <TextField fx:id="tfPackageName" layoutX="271.0" layoutY="109.0" prefHeight="25.0" prefWidth="239.0" />
+      <Button fx:id="btnAddNewPackage" layoutX="172.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnAddNewPackage" prefHeight="25.0" prefWidth="77.0" text="Add New" />
+      <Button fx:id="btnEditPackage" layoutX="258.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnEditPackage" prefHeight="25.0" prefWidth="77.0" text="Edit" />
+      <Button fx:id="btnSavePackage" layoutX="346.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnSavePackage" prefHeight="25.0" prefWidth="85.0" text="Save" />
+      <Button fx:id="btnDeletePackage" layoutX="444.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnDeletePackage" prefHeight="25.0" prefWidth="66.0" text="Delete" />
+      <Button fx:id="btnMainMenu" layoutX="89.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#btnMainMenu" text="Main Menu" />
+      <Label layoutX="211.0" layoutY="23.0" />
+      <TextField fx:id="tfPackageEndDate" layoutX="272.0" layoutY="184.0" prefHeight="25.0" prefWidth="239.0" />
+      <TextField fx:id="tfPackageStartDate" layoutX="272.0" layoutY="146.0" prefHeight="25.0" prefWidth="239.0" />
+   </children>
+</AnchorPane>
+=======
 <BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.PackageController">
     <left>
         <VBox alignment="TOP_CENTER" prefHeight="440.0" prefWidth="209.0" style="-fx-background-color: FF935C;" BorderPane.alignment="CENTER">
@@ -54,3 +80,4 @@
         </VBox>
     </left>
 </BorderPane>
+>>>>>>> e1e8cacb6101c56f514137f3af50587a247adb3a

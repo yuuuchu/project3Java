@@ -2,6 +2,11 @@
  * Sample Skeleton for 'Customers.fxml' Controller Class
  */
 
+<<<<<<< HEAD
+package TravelExperts.Controller;
+
+=======
+>>>>>>> e1e8cacb6101c56f514137f3af50587a247adb3a
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -15,6 +20,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+<<<<<<< HEAD
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+=======
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -24,6 +37,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import static TravelExperts.Controller.MenuController.clickLabel;
+>>>>>>> e1e8cacb6101c56f514137f3af50587a247adb3a
 
 public class CustomerController {
 
@@ -33,6 +47,10 @@ public class CustomerController {
     @FXML // URL location of the FXML file that was given to the FXMLLoader
     private URL location;
 
+<<<<<<< HEAD
+    @FXML // fx:id="ddCustomerID"
+    private ComboBox<customerModel> ddCustomerID; // Value injected by FXMLLoader
+=======
     @FXML
     private BorderPane bpMain;
 
@@ -53,6 +71,7 @@ public class CustomerController {
 
     @FXML
     private TableView<?> tvCustomers;
+>>>>>>> e1e8cacb6101c56f514137f3af50587a247adb3a
 
     @FXML // fx:id="tfFirstName"
     private TextField tfFirstName; // Value injected by FXMLLoader
@@ -191,6 +210,11 @@ public class CustomerController {
     }
 
     @FXML
+<<<<<<< HEAD
+    void cbCustomerChanged(ActionEvent event) {
+        //loadCustomerID();
+    }
+=======
     void OnClickedExit(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/Main.fxml"));
         clickLabel(event, root);
@@ -218,6 +242,7 @@ public class CustomerController {
         assert tcAgentId != null : "fx:id=\"tcAgentId\" was not injected: check your FXML file 'Customers.fxml'.";
         assert btnDelete != null : "fx:id=\"btnDelete\" was not injected: check your FXML file 'Customers.fxml'.";
         assert btnAdd != null : "fx:id=\"btnAdd\" was not injected: check your FXML file 'Customers.fxml'.";
+>>>>>>> e1e8cacb6101c56f514137f3af50587a247adb3a
 
     private void loadCustomerID() {
         customerModel customer = new customerModel();

@@ -40,6 +40,45 @@
    </children>
 </GridPane>-->
 
+<<<<<<< HEAD
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.CustomerController">
+   <children>
+      <ComboBox id="cbCustomers" fx:id="ddCustomerID" layoutX="266.0" layoutY="14.0" onAction="#cbCustomerChanged" prefHeight="33.0" prefWidth="244.0" />
+      <Label layoutX="14.0" layoutY="91.0" prefHeight="33.0" prefWidth="120.0" text="Customer First Name" />
+      <Label layoutX="14.0" layoutY="134.0" prefHeight="33.0" prefWidth="120.0" text="Customer Last Name" />
+      <Label layoutX="14.0" layoutY="175.0" prefHeight="33.0" prefWidth="120.0" text="Residential Address" />
+      <Label layoutX="14.0" layoutY="259.0" prefHeight="33.0" prefWidth="106.0" text="Province" />
+      <Label layoutX="14.0" layoutY="217.0" prefHeight="33.0" prefWidth="106.0" text="City" />
+      <Label layoutX="313.0" layoutY="301.0" prefHeight="33.0" prefWidth="90.0" text="Customer Agent" />
+      <Label layoutX="312.0" layoutY="259.0" prefHeight="33.0" prefWidth="79.0" text="Email Address" />
+      <Label layoutX="313.0" layoutY="217.0" prefHeight="33.0" prefWidth="90.0" text="Business Phone" />
+      <Label layoutX="312.0" layoutY="175.0" prefHeight="33.0" prefWidth="79.0" text="Home Phone" />
+      <Label layoutX="312.0" layoutY="134.0" prefHeight="33.0" prefWidth="79.0" text="Country" />
+      <Label layoutX="312.0" layoutY="91.0" prefHeight="33.0" prefWidth="79.0" text="Postal Code" />
+      <TextField id="tfFirstName" fx:id="tfFirstName" layoutX="143.0" layoutY="95.0" />
+      <TextField id="tfLastName" fx:id="tfLastName" layoutX="143.0" layoutY="138.0" />
+      <TextField id="tfResAddress" fx:id="tfAddress" layoutX="143.0" layoutY="179.0" />
+      <TextField id="tfCity" fx:id="tfCity" layoutX="143.0" layoutY="221.0" />
+      <TextField id="tfProvince" fx:id="tfProvince" layoutX="143.0" layoutY="263.0" />
+      <TextField id="tfCustomerAgent" fx:id="tfCustomerAgent" layoutX="408.0" layoutY="305.0" />
+      <TextField id="tfEmail" fx:id="tfEmailAddress" layoutX="408.0" layoutY="263.0" />
+      <TextField id="tfBusPhone" fx:id="tfBusinessPhone" layoutX="408.0" layoutY="221.0" />
+      <TextField id="tfHomePhone" fx:id="tfHomePhone" layoutX="408.0" layoutY="179.0" />
+      <TextField id="tfCountry" fx:id="tfCountry" layoutX="408.0" layoutY="138.0" />
+      <TextField id="tfPostalCode" fx:id="tfPostalCode" layoutX="408.0" layoutY="95.0" />
+      <Button id="btnEdit" fx:id="btnCustomerEdit" layoutX="273.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnCustomerEdit" prefHeight="33.0" prefWidth="79.0" text="Edit" />
+      <Label layoutX="99.0" layoutY="14.0" prefHeight="33.0" prefWidth="149.0" text="Please select a Customer ID" />
+      <Button id="btnSave" fx:id="btnCustomerSave" layoutX="369.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnCustomerSave" prefHeight="33.0" prefWidth="79.0" text="Save" />
+      <Button fx:id="btnGoToMain" layoutX="177.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#btnGoToMain" prefHeight="33.0" prefWidth="79.0" text="Main Menu" />
+   </children>
+</AnchorPane>
+=======
 <BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.CustomerController">
     <left>
         <VBox alignment="TOP_CENTER" prefHeight="335.0" prefWidth="200.0" style="-fx-background-color: FF935C;" BorderPane.alignment="CENTER">
@@ -129,3 +168,4 @@
        </GridPane>
    </right>
 </BorderPane>
+>>>>>>> e1e8cacb6101c56f514137f3af50587a247adb3a
