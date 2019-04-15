@@ -81,8 +81,7 @@ public class MenuController {
         clickLabel(event, root);
     }
 
-
-    public void clickLabel(MouseEvent event, Parent root) {
+    public static void clickLabel(MouseEvent event, Parent root) {
         Scene page = new Scene(root);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(page);

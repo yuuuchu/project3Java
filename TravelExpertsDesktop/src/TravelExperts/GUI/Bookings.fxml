@@ -42,7 +42,7 @@
                         <Font name="Courier New Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="lblExit" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Back To Menu" textAlignment="CENTER">
+                <Label fx:id="lblExit" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#onClickedExit" style="-fx-text-fill: white;" text="Back To Menu" textAlignment="CENTER">
                     <VBox.margin>
                         <Insets bottom="45.0" />
                     </VBox.margin>

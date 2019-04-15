@@ -40,40 +40,92 @@
    </children>
 </GridPane>-->
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.CustomerController">
-   <children>
-      <ComboBox id="cbCustomers" fx:id="ddCustomerID" layoutX="266.0" layoutY="14.0" onAction="#cbCustomerChanged" prefHeight="33.0" prefWidth="244.0" />
-      <Label layoutX="14.0" layoutY="91.0" prefHeight="33.0" prefWidth="120.0" text="Customer First Name" />
-      <Label layoutX="14.0" layoutY="134.0" prefHeight="33.0" prefWidth="120.0" text="Customer Last Name" />
-      <Label layoutX="14.0" layoutY="175.0" prefHeight="33.0" prefWidth="120.0" text="Residential Address" />
-      <Label layoutX="14.0" layoutY="259.0" prefHeight="33.0" prefWidth="106.0" text="Province" />
-      <Label layoutX="14.0" layoutY="217.0" prefHeight="33.0" prefWidth="106.0" text="City" />
-      <Label layoutX="313.0" layoutY="301.0" prefHeight="33.0" prefWidth="90.0" text="Customer Agent" />
-      <Label layoutX="312.0" layoutY="259.0" prefHeight="33.0" prefWidth="79.0" text="Email Address" />
-      <Label layoutX="313.0" layoutY="217.0" prefHeight="33.0" prefWidth="90.0" text="Business Phone" />
-      <Label layoutX="312.0" layoutY="175.0" prefHeight="33.0" prefWidth="79.0" text="Home Phone" />
-      <Label layoutX="312.0" layoutY="134.0" prefHeight="33.0" prefWidth="79.0" text="Country" />
-      <Label layoutX="312.0" layoutY="91.0" prefHeight="33.0" prefWidth="79.0" text="Postal Code" />
-      <TextField id="tfFirstName" fx:id="tfFirstName" layoutX="143.0" layoutY="95.0" />
-      <TextField id="tfLastName" fx:id="tfLastName" layoutX="143.0" layoutY="138.0" />
-      <TextField id="tfResAddress" fx:id="tfAddress" layoutX="143.0" layoutY="179.0" />
-      <TextField id="tfCity" fx:id="tfCity" layoutX="143.0" layoutY="221.0" />
-      <TextField id="tfProvince" fx:id="tfProvince" layoutX="143.0" layoutY="263.0" />
-      <TextField id="tfCustomerAgent" fx:id="tfCustomerAgent" layoutX="408.0" layoutY="305.0" />
-      <TextField id="tfEmail" fx:id="tfEmailAddress" layoutX="408.0" layoutY="263.0" />
-      <TextField id="tfBusPhone" fx:id="tfBusinessPhone" layoutX="408.0" layoutY="221.0" />
-      <TextField id="tfHomePhone" fx:id="tfHomePhone" layoutX="408.0" layoutY="179.0" />
-      <TextField id="tfCountry" fx:id="tfCountry" layoutX="408.0" layoutY="138.0" />
-      <TextField id="tfPostalCode" fx:id="tfPostalCode" layoutX="408.0" layoutY="95.0" />
-      <Button id="btnEdit" fx:id="btnCustomerEdit" layoutX="273.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnCustomerEdit" prefHeight="33.0" prefWidth="79.0" text="Edit" />
-      <Label layoutX="99.0" layoutY="14.0" prefHeight="33.0" prefWidth="149.0" text="Please select a Customer ID" />
-      <Button id="btnSave" fx:id="btnCustomerSave" layoutX="369.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnCustomerSave" prefHeight="33.0" prefWidth="79.0" text="Save" />
-      <Button fx:id="btnGoToMain" layoutX="177.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#btnGoToMain" prefHeight="33.0" prefWidth="79.0" text="Main Menu" />
-   </children>
-</AnchorPane>
+<BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.CustomerController">
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="335.0" prefWidth="200.0" style="-fx-background-color: FF935C;" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Customers" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Courier New Bold" size="28.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCustomer" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnCustomerClicked" style="-fx-text-fill: white;" text="Add new customer" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="35.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Courier New Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Modify customer" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="35.0" left="10.0" right="10.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Courier New Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblProduct" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Delete customer" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="35.0" left="10.0" right="10.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Courier New Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblSignout" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnClickedExit" style="-fx-text-fill: white;" text="Back to menu" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="20.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Courier New Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </left>
+   <right>
+       <GridPane prefHeight="440.0" prefWidth="607.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="20.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="510.0" minWidth="10.0" prefWidth="502.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="28.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="292.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+         <children>
+            <TableView fx:id="tvCustomers" prefHeight="261.0" prefWidth="510.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="tcName" prefWidth="75.0" text="Name" />
+                    <TableColumn fx:id="tcAddress" prefWidth="75.0" text="Address" />
+                    <TableColumn fx:id="tcHomePhone" prefWidth="75.0" text="Home No." />
+                    <TableColumn fx:id="tcBusPhone" prefWidth="84.0" text="Business No." />
+                    <TableColumn fx:id="tcEmail" prefWidth="133.0" text="Email" />
+                    <TableColumn fx:id="tcAgentId" prefWidth="67.0" text="Agent ID" />
+                </columns>
+            </TableView>
+            <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets left="380.0" />
+                </GridPane.margin>
+            </Button>
+            <Button fx:id="btnAdd" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets left="40.0" />
+                </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Modify" GridPane.columnIndex="1" GridPane.rowIndex="2">
+             <GridPane.margin>
+                 <Insets left="220.0" />
+             </GridPane.margin>
+         </Button>
+         </children>
+       </GridPane>
+   </right>
+</BorderPane>
