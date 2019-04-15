@@ -7,10 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -46,8 +43,11 @@ public class DBLoginController {
 
             }
             else{
-                lblError.setVisible(true);
-
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Login");
+                alert.setContentText("Message: " + lblError.getText());
+                alert.setHeaderText(null);
+                alert.showAndWait();
             }}
         catch(Exception e){
             e.printStackTrace();

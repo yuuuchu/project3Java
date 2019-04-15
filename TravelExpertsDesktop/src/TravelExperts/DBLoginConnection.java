@@ -6,6 +6,27 @@ import java.util.concurrent.ExecutionException;
 public class DBLoginConnection {
     Statement stmt;
     Connection con;
+
+    public DBLoginConnection() {
+    }
+
+    public static Connection getConnection() {
+        // Making a connection variable
+        Connection Con = null;
+
+        try {
+            // Getting the driver for the specific database
+            Class.forName("com.mysql.jdbc.Driver");
+            // Assigning the connection to the connection variable
+            Con = DriverManager.getConnection("jdbc:mysql://localhost:3306/travelexperts", "root", "");
+        } catch (SQLException | ClassNotFoundException var2) {
+            // Returning the error if not successful in making the connection
+            var2.printStackTrace();
+        }
+        // Returning the connection variable
+        return Con;
+    }
+
     public boolean connectDb(){
 
         try

@@ -1,56 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane fx:id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.MenuController">
-    <left>
-        <VBox alignment="TOP_CENTER" prefHeight="440.0" prefWidth="209.0" style="-fx-background-color: FF935C;" BorderPane.alignment="CENTER">
-            <children>
-                <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Packages" textAlignment="CENTER">
-                    <VBox.margin>
-                        <Insets bottom="10.0" top="25.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Courier New Bold" size="28.0" />
-                    </font>
-                </Label>
-                <Label fx:id="lblCustomer" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#OnCustomerClicked" style="-fx-text-fill: white;" text="Create new package" textAlignment="CENTER">
-                    <VBox.margin>
-                        <Insets bottom="35.0" top="25.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Courier New Bold" size="18.0" />
-                    </font>
-                </Label>
-                <Label fx:id="lblBooking" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Edit package" textAlignment="CENTER" VBox.vgrow="NEVER">
-                    <VBox.margin>
-                        <Insets bottom="35.0" top="25.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Courier New Bold" size="18.0" />
-                    </font>
-                </Label>
-                <Label fx:id="lblPackage" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Delete package" textAlignment="CENTER">
-                    <VBox.margin>
-                        <Insets bottom="35.0" top="25.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Courier New Bold" size="18.0" />
-                    </font>
-                </Label>
-                <Label fx:id="lblSignout" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: white;" text="Back to menu" textAlignment="CENTER">
-                    <VBox.margin>
-                        <Insets bottom="20.0" top="10.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Courier New Bold" size="18.0" />
-                    </font>
-                </Label>
-            </children>
-        </VBox>
-    </left>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TravelExperts.Controller.PackageController">
+   <children>
+      <ComboBox fx:id="ddPackageID" layoutX="272.0" layoutY="51.0" prefHeight="25.0" prefWidth="239.0" promptText="Package ID" />
+      <Label fx:id="lblSelectPackageID" layoutX="89.0" layoutY="51.0" prefHeight="25.0" prefWidth="150.0" text="Select Package ID" />
+      <Label fx:id="lblPackageStartDate" layoutX="89.0" layoutY="150.0" prefHeight="17.0" prefWidth="160.0" text="Package Start Date" />
+      <Label fx:id="lblPackageAgencyComm" layoutX="89.0" layoutY="294.0" prefHeight="17.0" prefWidth="160.0" text="Package Agency Commission" />
+      <TextField fx:id="tfPackageAgencyComm" layoutX="271.0" layoutY="290.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label fx:id="lblPackageEndDate" layoutX="89.0" layoutY="188.0" prefHeight="17.0" prefWidth="160.0" text="Package End Date" />
+      <Label fx:id="lblPackageDescription" layoutX="89.0" layoutY="225.0" prefHeight="17.0" prefWidth="160.0" text="Package Description" />
+      <TextField fx:id="tfPackageDescription" layoutX="271.0" layoutY="221.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label fx:id="lblPackageBasePrice" layoutX="89.0" layoutY="260.0" prefHeight="17.0" prefWidth="160.0" text="Package Base Price" />
+      <Label fx:id="lblPackageName" layoutX="89.0" layoutY="113.0" prefHeight="17.0" prefWidth="160.0" text="Package Name" />
+      <TextField fx:id="tfPackageBasePrice" layoutX="271.0" layoutY="256.0" prefHeight="25.0" prefWidth="239.0" />
+      <TextField fx:id="tfPackageName" layoutX="271.0" layoutY="109.0" prefHeight="25.0" prefWidth="239.0" />
+      <Button fx:id="btnAddNewPackage" layoutX="172.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnAddNewPackage" prefHeight="25.0" prefWidth="77.0" text="Add New" />
+      <Button fx:id="btnEditPackage" layoutX="258.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnEditPackage" prefHeight="25.0" prefWidth="77.0" text="Edit" />
+      <Button fx:id="btnSavePackage" layoutX="346.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnSavePackage" prefHeight="25.0" prefWidth="85.0" text="Save" />
+      <Button fx:id="btnDeletePackage" layoutX="444.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnDeletePackage" prefHeight="25.0" prefWidth="66.0" text="Delete" />
+      <Button fx:id="btnMainMenu" layoutX="89.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#btnMainMenu" text="Main Menu" />
+      <Label layoutX="211.0" layoutY="23.0" />
+      <TextField fx:id="tfPackageEndDate" layoutX="272.0" layoutY="184.0" prefHeight="25.0" prefWidth="239.0" />
+      <TextField fx:id="tfPackageStartDate" layoutX="272.0" layoutY="146.0" prefHeight="25.0" prefWidth="239.0" />
+   </children>
+</AnchorPane>
